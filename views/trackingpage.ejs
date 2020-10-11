@@ -119,7 +119,7 @@
       </div>
       <!-- Header End -->
     </header>
-    <body>
+    <body style="color:rgb(102, 102, 255); background-color:black;">
         <div>
 		
             <div className='my-3 details-page mx-2'>
@@ -128,7 +128,7 @@
                         href={'/image'}
                         download='deline-reciept'
                         title={'download reciept'}>
-                        <img
+                        <img style="width: 100%;"
                             src="<%= `${parcel.parcelRecipt.secure_url}`%>"
                             alt={'parcel'}
                             download
@@ -157,7 +157,7 @@
                     </li>
                     <li>
                         <strong> Insurance Cover and custom duty:</strong>
-                        <span> PAID</span>
+                        <span style="color:greenyellow; font-weight: bolder;"> PAID</span>
                     </li>
 
                     <li>
@@ -178,11 +178,11 @@
                     </li>
                     <li>
                         <strong>Shipping Address:</strong>
-                        <span className='text-success'><%= `${parcel.clientLocation}`%></span>
+                        <span className='text-success' style="color:greenyellow; font-weight: bolder;"><%= `${parcel.clientLocation}`%></span>
                     </li>
                     <li>
                         <strong>Present Destination Delivery Status: </strong>
-                        <span className='active-location text-danger'>
+                        <span className='active-location text-danger' style="color:red; font-weight: bolder;">
                             <%= `${parcel.location}`%>
                         </span>
                     </li>
