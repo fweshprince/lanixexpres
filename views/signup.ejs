@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <%= message %>
+    <div class="authForm">
+        <h2>User Signup</h2>
+        <form action="/users/signup" method="post">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="Email" id="" placeholder="Email">       
+            <input type="password" name="Password" id="password" placeholder="Password">   
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <div></div>
+    <script src="/general.js"></script>
+</body>
+</html>

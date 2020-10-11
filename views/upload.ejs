@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="authForm">
+        <h2>Upload a parcel</h2>
+      <form encType="multipart/form-data" action="/track/upload" method="POST">
+        <div className="form-group">
+          <input type="file" id="parcel-img" name="image" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="recipient-name" className="col-form-label">
+            Client Name:
+          </label>
+          <input type="text" className="form-control" id="recipient-name" name="clientName" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="client-email" className="col-form-label">
+            Client Email
+          </label>
+          <input type="email" className="form-control" id="client-email" name="clientEmail" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="client-location" className="col-form-label">
+            Client Location
+          </label>
+          <input type="text" className="form-control" id="client-location" name="clientLocation" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="sender-name" className="col-form-label">
+            Sender Name:
+          </label>
+          <input type="text" className="form-control" id="sender-name" name="senderName" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="sender-name" className="col-form-label">
+            Sender Location:
+          </label>
+          <input type="text" className="form-control" id="sender-location" name="senderLocation" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="parcel-weight" className="col-form-label">
+            Parcel weight (grams):
+          </label>
+          <input type="number  " className="form-control" id="parcel-weight" name="weight" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="parcel-location" className="col-form-label">
+            Parcel Location:
+          </label>
+          <input type="text" className="form-control" id="parcel-location" name="location"/>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="mvt-date" className="col-form-label">
+            Movement Date
+          </label>
+          <input type="date" className="form-control" id="mvt-date" name="movementDate" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="arrival" className="col-form-label">
+            Arrival Date
+          </label>
+          <input type="date" className="form-control" id="arrival" name="arrivalDate" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="arrival" className="col-form-label">
+            Status
+          </label>
+          <select className="form-control" id="status" name="status">
+            <option value="registered">Registered</option>
+            <option value="flight">Flight</option>
+            <option value="transit">Transit</option>
+            <option value="custom office">Custom Office</option>
+            <option value="delivered">Delivered</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="comment" className="col-form-label">
+            Comment
+          </label>
+          <textarea className="form-control" id="comment" name="comment"></textarea>
+        </div>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

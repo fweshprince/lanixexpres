@@ -1,0 +1,234 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box
+ }
+ body{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 17px;
+    /* line-height: 1.6; */
+ }
+ 
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 0;
+    color: rgba(255, 127, 80, 0.8);
+}
+.header-nav img{
+   max-height: 9vh;
+   padding: 0;
+   margin: 0;
+}
+.navbarlinks ul{
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+}
+.navbarlinks li{
+    list-style: none;
+}
+.navbarlinks li a{
+    text-decoration: none;
+     color: rgba(255, 127, 80, 0.8);
+     padding: 1rem;
+     display: block;
+     
+}
+.navbarlinks li a:hover{
+    background-color: #3d5b59;
+}
+a {
+    height: 100%;
+    text-decoration: none;
+}
+.tabs{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    cursor: pointer;
+}
+.tabs li{
+    margin: 3px;
+    color: coral;
+    padding: 1rem;
+}
+.tabs li:hover{
+    /* margin: 12px; */
+    color: coral;
+    background: #3d5b59;
+    
+}
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.15rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: coral;
+    border-radius: 20px;
+}
+
+.classWelcome{
+    background: #3d5b59;
+    padding: 1.5em 2em; 
+    /* width: 95%;  */
+    /* margin: 12px auto; */
+    color: #fff
+}
+[data-tab-content]{
+    display: none
+}
+.active[data-tab-content]{
+    display: block
+}
+.authForm{
+    /* background-color: rgba(255, 127, 80, 0.4); */
+    width: 40%;
+    padding: 1.5rem 1rem;
+    margin: 7vh auto;
+}
+
+input[type="tel"], input[type="text"], input[type="password"], input[type="email"]{
+ display: block;
+    padding: 0.5rem 1rem;
+    /* background-color: rgba(61, 91, 89); */
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid rgba(61, 91, 89);
+}
+.authForm input{
+    width: 95%;
+    margin: auto;
+    display: block;
+    color: rgba(61, 91, 89);
+    border-bottom: 2px solid rgba(61, 91, 89);
+    background-color: white;
+}
+#joinInput{
+    margin-top: 0.5em;
+    margin-left: 5vw;
+}
+.authForm input[type="submit"]{
+    background-color: rgba(61, 91, 89);
+    border: none;
+    color: rgba(255, 127, 80, 1);
+    padding: 1em 1em;
+    margin-top: 1.5em;
+}
+.authForm select{
+    width: 95%;
+    margin: 0.8rem auto 0 auto;
+    display: block;
+    padding: 0.5em 0.8em;
+    color: rgba(255, 127, 80, 1);
+    background-color: rgba(61, 91, 89);
+}
+.normalBtn{
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(61, 91, 89);
+    color: rgb(255, 127, 80);
+    padding: 0.8em 2em;
+    margin: 0.5rem 0.5rem 0.3rem 0;
+    font-weight: bold;
+}
+.joinBtn{
+    margin: 0.5rem 0.5rem 0.3rem 5vw;
+}
+.feedForm{
+    margin: 0.8rem 0 0rem 5vw;
+    border: 5px solid rgba(61, 91, 89);
+    background-color: rgba(61, 91, 89, 0.4);
+    border-radius: 5px;
+    width: 90%;
+}
+.modalBtn{
+    background: rgba(255, 127, 80, 0.8);
+    padding: 1em 2em;
+    /* border: 0; */
+     color: #fff;
+    border-radius: 7px;
+    margin-left: 5%;
+
+}
+.closeBtn{
+    color: rgba(255, 127, 80, 0.8);
+    float: right;
+    font-size: 30px;
+}
+.closeBtn:hover {
+    color: black;
+    cursor: pointer;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    overflow: auto;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+div.modalBtn{
+    width: 90%; 
+    margin: 12px auto; 
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.3), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+input[type="button"]:hover, input[type="submit"]:hover, div.modalBtn:hover{
+    background-color: #74bdcb;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex
+    }
+    .navbarlinks{
+        display: none;
+        width: 100%
+        
+    }
+    .navbarlinks.active{
+        display: flex;
+          
+    }
+    .header-nav{
+        flex-direction: column;
+        align-items: flex-start
+    }
+    .navbarlinks ul{
+        flex-direction: column;
+        width: 100%
+    }
+    .navbarlinks li a{
+        padding: 0.8rem 0.3rem
+    }
+    .authForm{
+
+        width: 80%;
+
+    }
+}
